@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>(1) Linux labs</title>
+    <style>
+      body {
+	  background-color: #000;
+	  color: #fff;
+      }
+
+      #labs-title {
+	  float: left;
+      }
+
+      #author-title {
+	  float: right;
+      }
+
+      .dir {
+	  color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="labs-title">Linux labs (1)</h1>
+    <h2 id="author-title">Jacek Walczak @ N12-32</h2>
+    <div style="clear: both;"></div>
+    <pre>
+
+<span class="dir">➜</span> mkdir Systemy_informatyczne_w_turystyce && cd Systemy_informatyczne_w_turystyce
+<span class="dir">➜ Systemy_informatyczne_w_turystyce</span> mkdir zajecia1 zajecia2 zajecia3
+<span class="dir">➜ Systemy_informatyczne_w_turystyce</span> mkdir zajecia1/konto zajecia1/prawa zajecia1/sciezki
+<span class="dir">➜ Systemy_informatyczne_w_turystyce</span> mkdir zajecia2/katalogi zajecia2/pliki
+<span class="dir">➜ Systemy_informatyczne_w_turystyce</span> mkdir zajecia2/katalogi/tworzenie zajecia2/katalogi/usuwanie
+<span class="dir">➜ Systemy_informatyczne_w_turystyce</span> tree
+.
+├── zajecia1
+│   ├── konto
+│   ├── prawa
+│   └── sciezki
+├── zajecia2
+│   ├── katalogi
+│   │   ├── tworzenie
+│   │   └── usuwanie
+│   └── pliki
+└── zajecia3
+
+10 directories, 0 files
+
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> cp -r zajecia2 zajecia3
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> tree
+.
+├── zajecia1
+│   ├── konto
+│   ├── prawa
+│   └── sciezki
+├── zajecia2
+│   ├── katalogi
+│   │   ├── tworzenie
+│   │   └── usuwanie
+│   └── pliki
+└── zajecia3
+    └── zajecia2
+        ├── katalogi
+        │   ├── tworzenie
+        │   └── usuwanie
+        └── pliki
+
+15 directories, 0 files
+
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> mv zajecia2/katalogi/usuwanie zajecia2/pliki
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> mv zajecia3 zajecia_przyszle
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> rm zajecia1/konto -r
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> rm -r zajecia_przyszle
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> tree
+.
+├── zajecia1
+│   ├── prawa
+│   └── sciezki
+└── zajecia2
+    ├── katalogi
+    │   └── tworzenie
+    └── pliki
+        └── usuwanie
+
+8 directories, 0 files
+    </pre>
+
+    <h1>Linux labs (2)</h1>
+    <pre>
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> cp /etc/hosts zajecia2/pliki
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> cat zajecia2/pliki/hosts
+127.0.0.1	localhost
+127.0.1.1	studio
+::1	localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> head zajecia2/pliki/hosts
+127.0.0.1	localhost
+127.0.1.1	studio
+::1	localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> tail zajecia2/pliki/hosts
+127.0.0.1	localhost
+127.0.1.1	studio
+::1	localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> mv zajecia2/pliki/hosts zajecia2/pliki/hosts.txt
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> mv zajecia2/pliki/hosts.txt zajecia2/katalogi/hosts.txt
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> mv zajecia2/katalogi/hosts.txt zajecia2/katalogi/kopia_hosts.txt
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> rm -i zajecia2/katalogi/kopia_hosts.txt
+rm: remove regular file 'zajecia2/katalogi/kopia_hosts.txt'? y
+<span class="dir">➜  Systemy_informatyczne_w_turystyce</span> touch ~/notatki.txt
+    </pre>
+  </body>
+</html>

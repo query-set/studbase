@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>(2) Linux labs</title>
+    <style>
+      body {
+	  background-color: #000;
+	  color: #fff;
+      }
+
+      #labs-title {
+	  float: left;
+      }
+
+      #author-title {
+	  float: right;
+      }
+
+      .dir {
+	  color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="labs-title">Linux labs (2)</h1>
+    <h2 id="author-title">Jacek Walczak @ N12-32</h2>
+    <div style="clear: both;"></div>
+    <pre>
+
+<span class="dir">➜ ~</span> su
+Password:
+<span class="dir">[studio ~]#</span> touch plik.txt
+<span class="dir">[studio ~]#</span> mkdir test
+<span class="dir">[studio ~]#</span> cp plik.txt test/
+<span class="dir">[studio ~]#</span> ls -la | grep 'plik.txt'
+-rw-r--r--  1 root root    0 04-20 23:43 plik.txt
+<span class="dir">[studio ~]#</span> chmod g+rw plik.txt
+-rw-rw-r--  1 root root    0 04-20 23:43 plik.txt
+<span class="dir">[studio ~]#</span> chmod o+rw plik.txt
+-rw-rw-rw-  1 root root    0 04-20 23:43 plik.txt
+<span class="dir">[studio ~]#</span> echo 'Jacek Walczak' >> test/plik1.txt
+<span class="dir">[studio ~]#</span> cd test
+<span class="dir">[studio test]#</span> cat plik1.txt
+Jacek Walczak
+<span class="dir">[studio ~]#</span> # NOTE: you&apos;ve finished on the 6th step.
+    </pre>
+  </body>
+</html>
