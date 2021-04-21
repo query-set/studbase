@@ -41,7 +41,27 @@ Password:
 <span class="dir">[studio ~]#</span> cd test
 <span class="dir">[studio test]#</span> cat plik1.txt
 Jacek Walczak
-<span class="dir">[studio ~]#</span> # NOTE: you&apos;ve finished on the 6th step.
+<span class="dir">[studio test]#</span> ls -la | grep 'plik1.txt'
+-rw-r--r--  1 root root   14 04-20 23:53 plik1.txt
+<span class="dir">[studio test]#</span> chmod 624 plik1.txt
+<span class="dir">[studio test]#</span> ls -la | grep 'plik1.txt'
+-rw--w-r--  1 root root   14 04-20 23:53 plik1.txt
+<span class="dir">[studio test]#</span> mkdir test1 &amp;&amp; touch test1/plik2.txt
+<span class="dir">[studio test]#</span> chmod 110 test1/plik2.txt
+<span class="dir">[studio test]#</span> ls -la test1 | grep 'plik2.txt'
+---x--x--- 1 root root    0 04-21 18:04 plik2.txt
+<span class="dir">[studio test]#</span> chown j3k:hya plik1.txt
+<span class="dir">[studio test]#</span> ls -la | grep 'plik1.txt'
+-rw--w-r--  1 j3k  hya    14 04-20 23:53 plik1.txt
+<span class="dir">[studio test]#</span> ln -s plik.txt Ala
+<span class="dir">[studio test]#</span> ls -la
+total 16
+drwxr-xr-x  3 root root 4096 04-21 18:08 .
+drwxr-x--- 22 root root 4096 04-20 23:48 ..
+lrwxrwxrwx  1 root root    8 04-21 18:08 Ala -> plik.txt
+-rw--w-r--  1 j3k  hya    14 04-20 23:53 plik1.txt
+-rw-r--r--  1 root root    0 04-20 23:43 plik.txt
+drwxr-xr-x  2 root root 4096 04-21 18:04 test1
     </pre>
   </body>
 </html>
