@@ -67,5 +67,3 @@ function seventh {
     # Set password
     sudo passwd uczen1
 }
-
-sixth 5

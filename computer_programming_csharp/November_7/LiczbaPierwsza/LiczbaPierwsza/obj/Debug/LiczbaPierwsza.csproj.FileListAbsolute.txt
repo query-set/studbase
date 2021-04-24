@@ -1,0 +1,9 @@
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\bin\Debug\LiczbaPierwsza.exe.config
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\bin\Debug\LiczbaPierwsza.exe
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\bin\Debug\LiczbaPierwsza.pdb
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\obj\Debug\LiczbaPierwsza.csprojAssemblyReference.cache
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\obj\Debug\LiczbaPierwsza.Form1.resources
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\obj\Debug\LiczbaPierwsza.Properties.Resources.resources
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\obj\Debug\LiczbaPierwsza.csproj.GenerateResource.cache
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\obj\Debug\LiczbaPierwsza.exe
+C:\Users\hyacinthus\source\repos\LiczbaPierwsza\LiczbaPierwsza\obj\Debug\LiczbaPierwsza.pdb
