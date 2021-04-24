@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+
+      .exercise {
+	  min-width: 500px;
+	  background-color: #ffeeed;
+	  padding: 10px;
+	  margin: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <script>
+      function first() {
+	const name = document.getElementById("name").value;
+	const surname = document.getElementById("surname").value;
+	const email = document.getElementById("email").value;
+
+	function is_upper(word) {
+	  return word[0] == word[0].toUpperCase();
+	}
+
+	function validateEmail(email) {
+	  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	  return re.test(String(email).toLowerCase());
+	}
+
+	if (!is_upper(name) || !is_upper(surname) || !validateEmail(email))
+	  alert("Some of the fields are not valid!");
+
+	alert("Your data is correct:\nName: " + name + "\nSurname: " + surname + "\nEmail: " + email)
+      }
+
+
+      function second() {
+	const str_values = document.getElementById("value2").value;
+	let tab_values = str_values.split(" ").map(Number);
+	let m = Math.max(...tab_values);
+
+	alert("Max value is: " + m);
+      }
+
+      function third() {
+	const nth = document.getElementById("value3").value;
+
+	function fib(n) {
+	  if (n <= 1) {
+	    return n;
+	  }
+	  return fib(n-1) + fib(n-2);
+	}
+
+	alert(nth + "th value of Fibonacci series is " + fib(nth));
+      }
+
+      function fourth() {
+	var x = document.getElementById("value41").value;
+	var y = document.getElementById("value42").value;
+
+	if (!x && !y) {
+	  alert("You have to provide both X and Y values in order to calculate GCD")
+	  return;
+	}
+
+	while(y) {
+	  let t = y;
+	  y = x % y;
+	  x = t;
+	}
+
+	alert("Greatest common divisior is: " + x);
+      }
+    </script>
+
+    <div class="exercise">
+      <h3>Exercise 1: form validation</h3>
+      <form onsubmit="first()">
+	<input type="text" name="name" id="name" placeholder="insert name" />
+	<br />
+	<input type="text" name="surname" id="surname" placeholder="insert surname" />
+	<br />
+	<input type="text" name="email" id="email" placeholder="insert email" />
+	<br />
+	<input type="submit" value="Go">
+      </form>
+    </div>
+
+    <div class="exercise">
+      <h3>Exercise 2: greatest number</h3>
+      <form onsubmit="second()">
+	<input type="text" name="value2" id="value2" placeholder="insert values" />
+	<br />
+	<input type="submit" value="Go">
+      </form>
+    </div>
+
+    <div class="exercise">
+      <h3>Exercise 3: Fibonacci&apos;s sequence</h3>
+      <form onsubmit="third()">
+	<input type="text" name="value3" id="value3" placeholder="insert number" />
+	<br />
+	<input type="submit" value="Go">
+      </form>
+    </div>
+
+    <div class="exercise">
+      <h3>Exercise 4: greatest common divisior</h3>
+      <form onsubmit="fourth()">
+	<input type="text" name="value41" id="value41" placeholder="insert value x" />
+	<br />
+	<input type="text" name="value42" id="value42" placeholder="insert value y" />
+	<br />
+	<input type="submit" value="Go">
+      </form>
+    </div>
+
+  </body>
+</html>

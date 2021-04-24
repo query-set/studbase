@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style>
+      div {
+	  padding: 10px;
+      }
+
+      #menu {
+	  height: 50px;
+	  color: white;
+	  font-weight: bold;
+	  background-color: #548DD0;
+	  display: flex;
+      }
+
+      .option {
+	  float: left;
+	  min-width: 50px;
+	  flex-grow: 1;
+	  text-align: center;
+	  height: 25px;
+	  font-size: 18px;
+	  border-right: 2px dotted #444444;
+	  opacity: 0.8;
+      }
+
+      .option:hover {
+	  background-color: #000;
+	  cursor: pointer;
+      }
+
+      #menu div:last-child {
+	  border-right: none;
+      }
+
+      #login {
+	  background-color:  #C5D9F1;
+	  text-align: right;
+      }
+
+      .area {
+	  height: 300px;
+	  float: left;
+      }
+
+      #container {
+	  display: flex;
+      }
+
+      #first_area, #second_area {
+	  width: 200px;
+      }
+
+      #working_area {
+	  background-color: #D9D9D9;
+	  flex-grow: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="logo">Logo</div>
+    <div id="menu">
+      <div class="option">Main Page</div>
+      <div class="option">Distros</div>
+      <div class="option">Installation</div>
+      <div class="option">Commands</div>
+      <div class="option">Linus Torvalds</div>
+      <div class="option">About</div>
+    </div>
+    <div id="login">Log in</div>
+    <div id="container">
+      <div class="area" id="first_area">First side-area</div>
+      <div class="area" id="working_area">Working area</div>
+      <div class="area" id="second_area">Second side-area</div>
+    </div>
+
+  </body>
+</html>

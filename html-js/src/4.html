@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaflet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  </head>
+  <body>
+    <div id="mapid" style="width: 800px; height: 800px;"></div>
+    <script>
+      const MAIN_POINT = [54.4425, 18.5558];
+
+      const mymap = L.map('mapid').setView(MAIN_POINT, 18);
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+	maxZoom: 18,
+	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+	  'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	id: 'mapbox/streets-v11',
+	tileSize: 512,
+	zoomOffset: -1
+      }).addTo(mymap);
+
+      // WZR
+      L.marker(MAIN_POINT).addTo(mymap).bindPopup(
+	"WZR, Wydział Ekonomiczny."
+      ).openPopup();
+
+      const POLICE_POINT = [54.4435, 18.5558];
+      L.circle(POLICE_POINT, 30, {
+	color: '#7eaefc',
+	fillColor: '#b0ceff',
+	fillOpacity: 0.5
+      }).addTo(mymap).bindPopup("Komenda Policji");
+
+      // Parking for students
+      L.polygon([
+	[54.442832, 18.556289],
+	[54.44282, 18.555989],
+	[54.44259, 18.5560],
+	[54.44259, 18.5562],], {
+	color: 'red',
+	fillColor: '#f03',
+	fillOpacity: 0.5
+      }).addTo(mymap).bindPopup("Parking for students");
+
+      // Parking for staff
+      L.polygon([
+	[54.442361, 18.556337],
+	[54.442336, 18.556048],
+	[54.44259, 18.5560],
+	[54.44259, 18.5562],], {
+	color: 'yellow',
+	fillColor: '#f7ff85',
+	fillOpacity: 0.5
+      }).addTo(mymap).bindPopup("Parking for staff");
+
+      var popup = L.popup();
+
+      function onMapClick(e) {
+	popup
+	  .setLatLng(e.latlng)
+	  .setContent("You clicked the map at " + e.latlng.toString())
+	  .openOn(mymap);
+      }
+
+      mymap.on('click', onMapClick);
+
+    </script>
+  </body>
+</html>

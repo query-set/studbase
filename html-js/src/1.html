@@ -1,0 +1,97 @@
+<html>
+  <head><title>Pierwsze zajęcia</title></head>
+  <body>
+
+    <table style="text-align: center;">
+      <tr>
+	<td colspan="3">
+	  <!-- zamiast znacznika <img> użyłem SVG do narysowania własnego loga -->
+	  <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+	    <circle cx="100" cy="100" r="100"/>
+	    <circle cx="100" cy="100" r="60" style="stroke:rgb(255,0,0); stroke-width:50"/>
+	  </svg>
+	  <h1 id="main_page">Pierwsze zajęcia z HTML i JS</h1>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <a href="#main_page">Strona główna</a>
+	  <br />
+	  <a href="https://www.wp.pl/">Wirtualna Polska</a>
+	  <br />
+	  <a href="#form">Formularz</a>
+	</td>
+	<td style="font-family: arial;color: red;background-image: url(./assets/backg.jpg);">
+O nas
+<hr />
+Nasza historia rozpoczęła się w 2002 roku z chwilą otwarcia pierwszego salonu stacjonarnego. Od tej pory nieustannie się rozwijamy, dzięki czemu staliśmy się ekspertami w branży komputerowej. Łączymy empatię i technologię, co pozwala nam lepiej rozumieć potrzeby Klientów. Jesteśmy otwarci na sugestie i oferujemy rozwiązania, zapewniające 100% satysfakcji.
+
+<ul>
+  <li>27 salonów w Polsce</li>
+  <li>26 działów w firmie</li>
+  <li>1 800+ zatrudnionych pracowników</li>
+  <li>38 000+ oferowanych produktów</li>
+  <li>1 000 000+ Klientów w 2020</li>
+</ul>
+
+<ol>
+  <li>
+Obecnie to 27 nowoczesnych salonów stacjonarnych w całej Polsce, jeden z najczęściej wybieranych Sklepów Internetowych w kraju i największy sprzedawca na Allegro. Wysoką jakość naszych usług potwierdzają pozytywne komentarze oraz liczne nagrody przyznawane przez Konsumentów.
+  </li>
+  <li>
+    Naszą największą siłą są ludzie, skupieni w 26 działach firmy. Profesjonalni, zaangażowani i otwarci na potrzeby Klientów. Nasz zespół liczy już ponad 1500 osób i stale się powiększa. Specjalistów i pasjonatów, którzy chcą do nas dołączyć zapraszamy do odwiedzenia portalu Kariera.
+    </li>
+</ol>
+<div id="form">
+ <form action="", method="post">
+  <label for="fname">Imię:</label><br />
+  <input type="text" id="fname" name="fname"><br />
+  <label for="lname">Nazwisko:</label><br />
+  <input type="text" id="lname" name="lname"><br />
+  <label for="email">Adres email:</label><br />
+  <input type="text" id="email" name="email"><br />
+
+  <input type="radio" id="wzr" name="wydzial" value="wzr">
+  <label for="wzr">Wydział Zarządzania</label><br>
+  <input type="radio" id="woig" name="wydzial" value="woig">
+  <label for="woig">Wydział Oceanografii i Geografii</label><br>
+  <input type="radio" id="wns" name="wydzial" value="wns">
+  <label for="wns">Wydział Nauk Społecznych</label><br>
+
+  <input type="checkbox" id="chess" name="chess" value="Szachy">
+  <label for="chess">Szachy</label><br>
+  <input type="checkbox" id="bike" name="bike" value="Bike">
+  <label for="bike">Rower</label><br>
+  <input type="checkbox" id="gym" name="gym" value="Gym">
+  <label for="gym">Siłownia</label>
+
+  <br />
+  <select id="os">
+    <option value="windows">Windows</option>
+    <option value="linux">GNU/Linux</option>
+    <option value="macos">MacOs</option>
+  </select>
+
+  <br />
+  <input type="submit" value="Submit">
+ </form>
+ </div>
+	</td>
+	<td>
+	  <iframe width="560" height="315"
+		  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+		  frameborder="0"
+		  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+	  </iframe>
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3">
+	  GNU Emacs - An extensible, customizable, free/libre text editor — and more.
+	  (27.02.2021r.)
+	</td>
+      </tr>
+    </table>
+
+  </body>
+</html>
