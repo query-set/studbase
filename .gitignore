@@ -1,5 +1,10 @@
+# general - every subject contains those
+exercises/
 *.docx
 *.pptx
 
+# linux directory
 Systemy_informatyczne_w_turystyce/
-exercises/
+
+# java directory
+*.class
