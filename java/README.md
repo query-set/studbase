@@ -2,5 +2,5 @@
 
 
 1. [X] simple I/O
-2. [ ] switch/cases
-3. [ ] arrays/loops
+2. [X] switch/cases
+3. [X] arrays/loops
