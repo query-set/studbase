@@ -2,7 +2,8 @@
 
 ### List of exercises
 
-1. [X] command line basics, permissions
-2. [ ] bash scripts
-3. [ ] functions in bash scripts
-4. [ ] programming tools
+1. [X] command line basics
+2. [X] permissions
+3. [X] bash scripts
+4. [X] functions in bash scripts
+5. [X] programming tools (make)
