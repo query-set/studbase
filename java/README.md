@@ -8,6 +8,8 @@
    1. [X] rectangle's area
    2. [X] quadratic equation
    3. [ ] bubble-sort I/O
+   4. [ ] palindromes (recursion)
+   5. [ ] interfaces/inheritance
 
 
 
