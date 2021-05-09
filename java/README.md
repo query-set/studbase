@@ -5,9 +5,9 @@
 2. [X] switch/cases
 3. [X] arrays/loops
 4. [ ] OO programming
-   1. [ ] rectangle's area
-   2. [ ] quadratic equation
-   3. [ ]
+   1. [X] rectangle's area
+   2. [X] quadratic equation
+   3. [ ] bubble-sort I/O
 
 
 

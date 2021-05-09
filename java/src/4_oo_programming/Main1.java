@@ -1,4 +1,4 @@
-package exercise;
+package exercise1;
 
 import java.io.*;
 import java.util.Scanner;
@@ -34,7 +34,7 @@ class Rectangle {
 }
 
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) throws IOException {
 	Rectangle rectangle = new Rectangle();
 	rectangle.read_data();
