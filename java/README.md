@@ -7,8 +7,8 @@
 4. [ ] OO programming
    1. [X] rectangle's area
    2. [X] quadratic equation
-   3. [ ] bubble-sort I/O
-   4. [ ] palindromes (recursion)
+   3. [X] bubble-sort I/O
+   4. [X] palindromes (recursion)
    5. [ ] interfaces/inheritance
 
 
