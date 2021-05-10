@@ -4,18 +4,18 @@ import java.io.*;
 import java.util.Scanner;
 
 class Sort {
-    public ArrayList<int> read_data(ArrayList<int> numbers, int len) throws IOException {
+    public int[] read_data(int[] numbers, int len) throws IOException {
 	Scanner scanner = new Scanner(System.in);
 
 	for (int i = 0; i < len; i++) {
-	    System.out.printf("Number %d.: ", (i+1));
-	    int num = Int.parseInt(scanner.nextLine());
-	    numbers.add(num);
+	    System.out.printf("n %d: ", (i+1));
+	    int num = Integer.parseInt(scanner.nextLine());
+	    numbers[i] = num;
 	}
 	return numbers;
     }
 
-    public ArrayList<int> process_data(ArrayList<int> numbers, int len) {
+    public int[] process_data(int[] numbers, int len) {
 	int i, j, tmp;
 	for (i = 1; i <= len-1; i++) {
 	    for (j = len-1; j >= i; --j) {
@@ -29,22 +29,23 @@ class Sort {
 	return numbers;
     }
 
-    public void display_result(ArrayList<int> numbers, int len) {
+    public void display_result(int[] numbers, int len) {
 	System.out.println("\nResult after sorting:");
 	for (int i = 0; i < len; i++) {
-	    System.out.printf("%d, ", numbers[i]);
+	    if (i+1 == len)
+		System.out.printf("%d\n", numbers[i]);
+	    else
+		System.out.printf("%d, ", numbers[i]);
 	}
+	System.out.println();
     }
 }
 
 
-public class Main2 {
+public class Main3 {
     public static void main(String[] args) throws IOException {
-	// length of array
 	int len = 6;
-
-	// One can use Array<>, but ArrayList is easier to being extended
-	ArrayList<int> numbers = new ArrayList<int>();
+	int[] numbers = new int[len];
 
 	Sort sort = new Sort();
 	numbers = sort.read_data(numbers, len);
