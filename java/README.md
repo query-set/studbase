@@ -4,13 +4,12 @@
 1. [X] simple I/O
 2. [X] switch/cases
 3. [X] arrays/loops
-4. [ ] OO programming
+4. [X] OO programming
    1. [X] rectangle's area
    2. [X] quadratic equation
    3. [X] bubble-sort I/O
    4. [X] palindromes (recursion)
-   5. [ ] interfaces/inheritance
-
+   5. [X] interfaces/inheritance
 
 
 ### Tips
