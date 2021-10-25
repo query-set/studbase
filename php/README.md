@@ -5,7 +5,11 @@ Course link: http://porzuczek.pl/board/N21SIWJP32/nsuyykilrsomn63m
 1. [X] PHP essentials
 2. [X] Functions
 3. [X] Arrays
-4. [X] Text processing 
+4. [X] Text processing
+5. [ ] Site components
+   - [X] 7
+   - [ ] 9
+   - [ ] 10
 
 ### Utilities
 
