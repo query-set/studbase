@@ -37,7 +37,9 @@
 		</button>
 	    </form>
 	    <?php
+	    session_start();
 	    include 'src/post_session.php';
+	    echo "Printing value set in session: " . $_SESSION['surname'] . "\n";
 	    ?>
 	</div>
     </body>

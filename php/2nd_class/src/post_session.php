@@ -2,9 +2,7 @@
 // 9th exercise from `web elements` class
 // 7th exercise from `web elements` class
 if ($_POST['send']) {
-    $cookie_value = $_POST['surname'];
-    session_start();
-    setcookie("my-cookie", $cookie_value);
+    $_SESSION['surname'] = $_POST['surname']; // to fix
     header("Location: localhost:8000");
 }
 
