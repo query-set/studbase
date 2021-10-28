@@ -32,14 +32,12 @@
 		    <br>
 		    <input name="surname">
 		</div>
-		<button type="submit" name="send" value="send">
+		<button type="submit" name="send2" value="send2">
 		    Send
 		</button>
 	    </form>
 	    <?php
-	    session_start();
 	    include 'src/post_session.php';
-	    echo "Printing value set in session: " . $_SESSION['surname'] . "\n";
 	    ?>
 	</div>
     </body>

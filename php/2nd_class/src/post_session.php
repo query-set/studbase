@@ -1,9 +1,22 @@
 <?php
 // 9th exercise from `web elements` class
-// 7th exercise from `web elements` class
-if ($_POST['send']) {
-    $_SESSION['surname'] = $_POST['surname']; // to fix
+if (isset($_POST['send2']) && $_POST['send2']) {
+    if (isset($_POST['surname'])) {
+        $surname = $_POST['surname'];
+    } else {
+        $surname = "Surname is missing";
+    }
+    session_start();
+    $_SESSION['surname'] = $surname;
+
     header("Location: localhost:8000");
+
+    // Debugging
+    echo "POST array: ";
+    print_r($_POST);
+    echo "</br>";
+    echo "SESSION array: ";
+    print_r($_SESSION);
 }
 
 // The closing tag of a PHP block at the end of a file is optional, and in

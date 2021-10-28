@@ -1,6 +1,6 @@
 <?php
 // 7th exercise from `web elements` class
-if ($_POST['send']) {
+if (isset($_POST['send2']) && $_POST['send']) {
     $cookie_value = $_POST['name'];
     setcookie("my-cookie", $cookie_value);
     header("Location: localhost:8000");
